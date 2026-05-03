@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Responsive Animated Page</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  width: 300px;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.card:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background: #00c6ff;
+  transform: translateY(-5px);
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Card 1</h2>
+    <p>Click ON Button.</p>
+    <button>Click Me</button>
+  </div>
+
+  <div class="card">
+    <h2>Card 2</h2>
+    <p>Click ON Button.</p>
+    <button>Click Me</button>
+  </div>
+
+  <div class="card">
+    <h2>Card 3</h2>
+    <p>Click ON Button.</p>
+    <button>Click Me</button>
+  </div>
+
+</div>
+
+</body>
+</html>
